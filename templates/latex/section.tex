@@ -1,0 +1,16 @@
+\BLOCK{ extends "resume.tex" }
+
+\BLOCK{ block body }
+
+    \BLOCK{ for sec in section_order }
+        \BLOCK{ include "sections/" + sec + ".tex"}
+    \BLOCK{ endfor }
+
+    % Projects
+    %\section{Projects (Extracurricular)}
+    %\cvlistitem{See various projects at joshua.github.io}
+    %\cvitem{Digit Recognizer Kaggle Competition}{Wrote a fully vectorized multi-layer feedforward neural network with L2 regularization trained using stochastic gradient descent with momentum that has an accuracy score of 0.947 on the MNIST dataset (\url{https://github.com/joshloyal/mnist}).}
+    %\cvitem{Sentiment Analysis on Movie Reviews Kaggle Competition}{Developed a model with an accuracy score of 0.62 on the Rotten Tomatoes dataset (\url{https://github.com/joshloyal/samr}).}
+    %\cvitem{Statistical Learning Methods}{Implemented various machine learning algorithms from the book \textit{Elements of Statistical Learning} by Hastie, Tibshirani, and Friedman (\url{https://github.com/joshloyal/statlearn}).}
+
+\BLOCK{ endblock }

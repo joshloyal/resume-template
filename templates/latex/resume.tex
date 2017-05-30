@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper,roman]{moderncv}
+
+% moderncv themes
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\renewcommand{\familydefault}{\sfdefault}
+
+% update header fonts
+\renewcommand*{\namefont}{\fontsize{16}{40}\mdseries\upshape}
+%\usepackage{etoolbox} \patchcmd{\makehead}{\\\null}{\par\vspace{-\baselineskip}\nu??ll}{}{}
+\makeatletter
+\patchcmd{\makehead}{%search
+  \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\\null}{%replace
+  \flushmakeheaddetails\@firstmakeheaddetailselementtrue\par\vspace{-\baselineskip}\null}{%success
+  }{%failure
+  }
+\makeatother
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+% adjust the page margins
+\usepackage[scale=0.9, left=0.5in, right=0.5in]{geometry}
+
+\newcommand*{\cvconference}[7][.25em]{%
+  \cvitem[#1]{\textbf{#2}}{%
+      {#3 at #4}%
+          \ifthenelse{\equal{#4}{}}{}{, {\itshape#5}}%
+          \ifthenelse{\equal{#5}{}}{}{, {\textbf{#6}}}%
+          .\strut%
+          \ifx&#7&%
+            \else{\newline{}\begin{minipage}[t]{\linewidth}\small% next line: customization
+            \fontfamily{pzc}\selectfont% The percent signs are necessary!
+            #7\end{minipage}}\fi}}
+
+\newcommand*{\cvgrant}[7][.25em]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+	  {{\bfseries #4}\ifthenelse{\equal{#6}{}}{}{, {\itshape #6} }} & {\bfseries #5} \\%
+	  {\color{color1} #3} & {\color{color1} #2}\\%
+  \end{tabular*}%
+  \ifx&#7&%
+    \else{\\\vbox{\small#7}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\cvschool}[7][.25em]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+	  {{\bfseries #4}\ifthenelse{\equal{#6}{}}{}{, #6}} & {\bfseries #5} \\%
+	  {\color{color1} #3} & {\color{color1} #2}\\%
+  \end{tabular*}%
+  \ifx&#7&%
+    \else{\\\vbox{\small#7}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\cvjob}[7][.25em]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+	  {{\bfseries #4}\ifthenelse{\equal{#6}{}}{}{, #6}} & {\bfseries #5} \\%
+	  {\color{color1} #3} & {\color{color1} #2}\\%
+  \end{tabular*}%
+  \ifx&#7&%
+    \else{\\\vbox{\small#7}}\fi%
+  \par\addvspace{#1}}
+
+% personal data
+\firstname{\VAR{name.first}}
+\familyname{\VAR{name.middle} \VAR{name.last}}
+\address{\VAR{address.street}}{\VAR{address.location}}
+\mobile{\VAR{phone}}
+\email{\VAR{email}}
+%\social[linkedin][www.linkedin.com/in/joshloyal]{Joshua Loyal}
+%\social[github][www.github.com/joshloyal]{joshloyal}
+\homepage{\VAR{homepage}}
+
+\nopagenumbers{}
+
+%------------------------------------------------------------------------
+%       content
+%------------------------------------------------------------------------
+\begin{document}
+\vspace*{-2\baselineskip}
+\maketitle
+\vspace*{-3\baselineskip}
+
+\BLOCK{ block body }
+\BLOCK{ endblock }
+
+\end{document}

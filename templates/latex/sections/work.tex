@@ -1,0 +1,14 @@
+% Work Experience
+\section{Relevant Work/Research Experience}
+\BLOCK{ for job in work }
+    \cventry[0.05em]{\VAR{job.dates}}{\VAR{job.title}}{\VAR{job.company}}{\VAR{job.location}}{}{\BLOCK{ if 'advisors' in job } \textbf{Advisors:} \VAR{job.advisors} \BLOCK{ endif }}
+    \BLOCK{ for detail in job.details }
+        \subsection{\normalsize \VAR{detail.title}}
+        \BLOCK{ for desc in detail.details }
+            \cvlistitem[0.05em]{\VAR{desc}}
+        \BLOCK{ endfor }
+    \BLOCK{ endfor }
+    \BLOCK{ if not loop.last }
+        \vspace{1em}
+    \BLOCK{ endif }
+\BLOCK{ endfor }

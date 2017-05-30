@@ -1,0 +1,197 @@
+# Data for Resume
+name:
+  first: Joshua
+  middle: D.
+  last: Loyal
+
+address:
+    street: 39 Lexington Avenue
+    location: Somerville, MA 02144
+phone: +1-(919)-923-5621
+email: joshua.d.loyal@gmail.com
+homepage: joshloyal.github.io
+
+# This determines the order of the sections
+section_order :
+  - education
+  - skills
+  - publications
+  - honors
+  - conferences
+  - work
+  - teaching
+
+education:
+  - school: Yale University
+    location: New Haven, CT
+    degree: M.S. Physics
+    dates: December 2016
+
+  - school: Duke University
+    location: Durham, NC
+    degree: B.S. Physics and B.S. Mathematics
+    dates: May 2013
+    gpa: '3.83/4.00'
+    details:
+      - Magna Cum Laude, Graduation with High Distinction in Physics.
+      - "Dean's List
+        (Spring 2013, Fall 2012, Spring 2012, Fall 2011, Spring 2011, Spring 2010, Fall 2009)."
+      - Graduate level course work in mathematics.
+
+skills:
+  - title: Languages
+    details: C, C++, Python, Bash, R, MongoDB, Redis, SQL.
+
+  - title: Frameworks
+    details: C++ (STL, ROOT, TMVA),
+             Python (NumPy, SciPy, Scikit-learn, TensorFlow, Pandas, Matplotlib).
+
+  - title: Utilities
+    details: Make, Standard Unix/Linux and OS X tools, Git, SVN, \LaTeX.
+
+honors:
+  - University and Teaching Fellowships, Yale University, \$31,250.
+  - Science Undergraduate Laboratory Internship, U.S. DOE, \$5,000.
+  - Triangle University Nuclear Laboratory REU Program, U.S. NSF, \$4,500.
+
+conferences:
+  - type: Talk
+    event: PyCon Ukraine
+    title: Classifying Products Based on Images and Text
+    location: Arena Lviv (Lviv, UA)
+    year: 2017
+    code: "https://github.com/joshloyal/pydata-amazon-products"
+
+  - type: Talk
+    event: PyData Meetup
+    title: Classifying Products Based on Images and Text
+    location: Civis Analytics (Chicago, IL)
+    year: 2017
+    code: "https://github.com/joshloyal/pydata-amazon-products"
+
+  - type: Talk and Workshop
+    event: Open Data Science Conference
+    title: Introduction to Python for Data Science
+    location: Marriot Waterfront (San Francisco, CA)
+    year: 2015
+    code: "https://github.com/joshloyal/odsc-pisa"
+
+  - type: Poster
+    event: US ATLAS Physics Workshop
+    title: Search for the Standard Model Higgs Boson in the
+           $H \rightarrow Z\gamma$ Decay Mode at $\sqrt{s} = 7$ and $8$ TeV
+    location: University of Michigan (Ann Arbor, MI)
+    year: 2012
+
+  - type: Talk
+    event: 77th Annual Meeting of the Southeastern Section of the American Physical Societ
+    title: W Boson Production at the ATLAS Detector
+    location: Louisiana State University (Baton Rouge, LA)
+    year: 2010
+
+  - type: Poster
+    event: Sigma Xi Annual Meeting and International Research Conference
+    title: Z Boson Production at the ATLAS Detector
+    location: Raleigh Convention Center (Raleigh, NC)
+    year: 2010
+
+work:
+  - company: DataRobot, Inc.
+    title: Data Scientist
+    location: Boston, Massachusetts
+    dates: 2014 -- Present
+    website: "https://www.datarobot.com/"
+    details:
+      - title: Deep Learning
+        details:
+          - "Lead Data Scientist spearheading the initiative to use Google's TensorFlow to
+            build a Deep Learning library that automates neural network building for various
+            response variable distributions -- Binomial, Gaussian, Poisson, Gamma, and Tweedie
+            -- as well as incorporates methods to handle high dimensional categorical variables
+            using categorical embeddings."
+
+      - title: Natural Language Processing
+        details:
+          - "Reduced text model memory usage -- a 50\\% improvement over the previous model --
+            by storing the vocabulary in a Marisa Trie data structure duing inference and a C++
+            un-ordered dictionary during training."
+          - "Increased model accuracy by utilize new feature weighting schemes such as
+            Delta-TFIDF and Binormal Seperation."
+          - "Developed predictive models for NLP: regularized GLMs, SVMs, and CNNs over
+            word embeddings."
+
+      - title: Multiclass Classification
+        details:
+          - "Co-wrote a library to perform multi-class classification using a One-Vs-All scheme
+            that included code for efficient data partitioning and custom objective functions
+            such as multi-class AUC and confusion entropy."
+
+      - title: Unsupervised Learning
+        details:
+          - "Lead Data Scientist on a project to incorporate unsupervised learning algorithms into
+            the application."
+          - "Implemented a Variational Autoencoder with a Normalizing Flow applied to the initial
+            variational density to learn a scalable latent variable model over correlated
+            categorical variables or text."
+          - "Developed various clustering models such as K-means, K-medoids, K-modes, HDBSCAN,
+            and Gaussian mixtures."
+
+      - title: Leadership
+        details:
+          - "Member of the technical leadership group charged with monitoring code quality
+            and design."
+          - "Organizer of the Noontime Informal Paper Sessions (NIPS) weekly paper reading and
+            discussion group."
+
+  - company: Yale University (ATLAS experiment at CERN)
+    title: Graduate Researcher
+    location: Geneva, Switzerland and New Haven, CT
+    dates: 2013 -- 2014
+    advisors: Tobias Golling, Keith Baker
+    details:
+      - title: Flavor-Tagging/Higgs Boson Classification
+        details:
+          - "Collaborated with an undergraduate to design GAIA, a deep learning framework for
+            particle jet identification written in C++, which improved the accuracy of identifying
+            signal events."
+          - "Compared various classifiers, such as gradient boosted decision trees and neural
+            networks, to determine the best performing model based on the model's ROC curve."
+
+      - title: SUSY Snowmass Study
+        details:
+          - "Determination of statistical upper limits and discovery reach of SUSY simplified
+            models with compressed mass spectra based on a statistical analysis of high
+            dimensional and highly correlated Monte Carlo simulations."
+
+  - company: Duke University and ANL (ATLAS experiment at CERN)
+    title: Undergraduate Researcher
+    location: Durham, NC and Lemont, IL
+    dates: 2010 -- 2013
+    advisors: Alfred Goshaw, Sergei Chekanov
+    details:
+      - title: Higgs Boson Analysis
+        details:
+        - "Performed a quantitative analysis using data selected from a sample of more than 10
+          billion events collected by the ATLAS experiment using C++, Python, ROOT
+          (a C++ based analysis framework), Linux batch systems, and distributed analysis software
+          similar to Hadoop."
+        - "Created statistical models to predict the probability of observing rare physics
+          processes with a low signal to background ratio. Tested these models with frequentist
+          hypothesis tests using the profile likelihood test statistic."
+
+      - title: Electroweak Analysis
+        details:
+          - "Cleaned, validated and prepared data for analysis. Identified irregularities within
+            the data. Corrected problems in corrupt data where deemed possible. Extracted and
+            selected appropriate subsets for analysis."
+          - "Presented each step of the analysis using appropriate visualization techniques at
+            ATLAS collaboration meetings."
+
+teaching:
+  - title: Teaching Fellow
+    company: Yale University
+    location: New Haven, CT
+    dates: 2013 -- 2014
+    details: "Lectured on basic statistical and mathematical methods, error analysis,
+             classical mechanics, electricity and magnetism, and laboratory procedures to a class
+             of 20 students."

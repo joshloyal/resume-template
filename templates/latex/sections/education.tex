@@ -1,0 +1,7 @@
+\section{Education}
+\BLOCK{ for edu in education }
+    \cventry[0.05em]{\VAR{edu.dates}}{\VAR{edu.degree}}{\VAR{edu.school}}{\VAR{edu.location}}{Cumulative GPA: \VAR{edu.gpa}}{}
+    \BLOCK{ for detail in edu.details }
+        \cvlistitem[0.05em]{\VAR{detail}}
+    \BLOCK{ endfor }
+\BLOCK{ endfor }
