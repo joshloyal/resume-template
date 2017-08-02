@@ -1,0 +1,36 @@
+// Typography
+$font-family-main: georgia, 'times new roman', times, serif;//, 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$font-family-headings: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$font-size: 1 em;
+
+// Padding
+$padding-large: 20%;
+$padding-small: 5%;
+$padding-x-small: 3%;
+
+// Brand colours
+$brand-color: #fff;
+$background-color: #fff;
+$border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
+
+// Typography colours
+$text-color: #383838;
+$link-color: #ff8600;//#FA6300;
+$selection-color: #D4D4D4; // visible when highlighting text
+
+// Header colours
+$header-link-color: #383838;
+
+// Feature image for articles
+$feature-image-text-color: #fff;
+$feature-image-size: cover; // options include "cover", "contain", "auto"
+
+// Header description box
+$header-desc-background-color: #F98752;
+$header-desc-text-color: #FFF;
+
+// Table colours
+$table-hover-color: #FFFBFF;
+
+// Resume colours
+$resume-section-color: #ff8600;//#4582ec;

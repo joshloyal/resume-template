@@ -1,4 +1,5 @@
 build/*
+css/*
 *.aux
 *.out
 *.log

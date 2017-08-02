@@ -28,11 +28,18 @@ def main(output_type):
         lstrip_blocks=True,
         loader=jinja2.FileSystemLoader(os.path.abspath('./templates/markdown')))
 
+    html_env = jinja2.Environment(
+        trim_blocks=True,
+        lstrip_blocks=True,
+        loader=jinja2.FileSystemLoader(os.path.abspath('./templates/html')))
+
 
     if output_type == 'tex':
         template = latex_env.get_template('section.{}'.format(output_type))
-    else:
+    elif output_type == 'md':
         template = markdown_env.get_template('section.{}'.format(output_type))
+    else:
+        template = html_env.get_template('section.{}'.format(output_type))
 
     options = yaml.load(open('./data/resume.yaml', 'r'))
     render_template = template.render(**options)

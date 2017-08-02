@@ -22,6 +22,10 @@ section_order :
   - teaching
 
 education:
+  - school: University of Illinois at Urbana-Champaign
+    location: Champaign-Urbana, IL
+    degree: Ph.D. Statistics
+    dates: Present
   - school: Yale University
     location: New Haven, CT
     degree: M.S. Physics
@@ -43,13 +47,14 @@ skills:
     details: C, C++, Python, Bash, R, MongoDB, Redis, SQL.
 
   - title: Frameworks
-    details: C++ (STL, ROOT, TMVA),
+    details: C++ (STL, ROOT),
              Python (NumPy, SciPy, Scikit-learn, TensorFlow, Pandas, Matplotlib).
 
   - title: Utilities
     details: Make, Standard Unix/Linux and OS X tools, Git, SVN, \LaTeX.
 
 honors:
+  - Graduate Teaching Assitantship, University of Illinois at Urbana-Champaign, \$18,315.
   - University and Teaching Fellowships, Yale University, \$31,250.
   - Science Undergraduate Laboratory Internship, U.S. DOE, \$5,000.
   - Triangle University Nuclear Laboratory REU Program, U.S. NSF, \$4,500.
@@ -188,6 +193,11 @@ work:
             ATLAS collaboration meetings."
 
 teaching:
+  - title: Teaching Assistant
+    company: University of Illinois at Urbana-Champaign
+    location: Urbana-Champaign, IL
+    dates: Present
+    details: "Discusion leader and grader for STAT 400 (Statistics and Probability I)."
   - title: Teaching Fellow
     company: Yale University
     location: New Haven, CT
