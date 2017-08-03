@@ -8,7 +8,7 @@ BASE=$(PWD)
 CSS_DIR=$(BASE)/css
 CSS=$(CSS_DIR)/main.css
 IMG_DIR=$(BASE)/img
-SITE_DIR=$(BASE)/_site
+SITE_DIR?=$(BASE)/_site
 
 .PHONY: all pdf markdown css html site serve
 
