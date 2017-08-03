@@ -1,14 +1,15 @@
-BUILD_DIR=$(PWD)/build
+CUR_DIR=$(CURDIR)
+BUILD_DIR=$(CUR_DIR)/build
 TEX=$(BUILD_DIR)/resume.tex
 PDF=$(BUILD_DIR)/resume.pdf
 MD=$(BUILD_DIR)/resume.md
 HTML=$(BUILD_DIR)/resume.html
 YAML_FILES=cv.yaml
-BASE=$(PWD)
-CSS_DIR=$(BASE)/css
+CSS_DIR=$(CUR_DIR)/css
 CSS=$(CSS_DIR)/main.css
-IMG_DIR=$(BASE)/img
-SITE_DIR?=$(BASE)/_site
+IMG_DIR=$(CUR_DIR)/img
+SITE_DIR?=$(CUR_DIR)/_site
+
 
 .PHONY: all pdf markdown css html site serve
 
@@ -20,7 +21,7 @@ site: $(SITE_DIR)
 
 serve: $(SITE_DIR)
 	cd $(SITE_DIR); \
-	python ../scripts/run_server.py
+	python $(CUR_DIR)/scripts/run_server.py
 
 html: $(HTML) $(CSS)
 
@@ -41,16 +42,16 @@ $(SITE_DIR): $(HTML) $(CSS)
 	cp -r $(IMG_DIR) $(SITE_DIR)
 
 $(TEX):
-	python ./src/generate.py tex
+	python $(CUR_DIR)/src/generate.py tex
 
 $(MD):
-	python ./src/generate.py md
+	python $(CUR_DIR)/src/generate.py md
 
 $(CSS): $(CSS_DIR)
 	sass --update sass:css
 
 $(HTML): $(CSS)
-	python ./src/generate.py html
+	python $(CUR_DIR)/src/generate.py html
 
 $(PDF): $(TEX) $(BUILD_DIR)
 	cd $(BUILD_DIR); pdflatex $(TEX)
