@@ -12,7 +12,7 @@
   }
 }
 %link-hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: darken($link-color, 15%);
 }
 
@@ -43,4 +43,13 @@ a.button:hover {
 // States
 .disabled {
   opacity: 0.7;
+}
+
+.navbar-default {
+    background-color: $background-color
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: $link-color;
 }

@@ -67,6 +67,9 @@ table {
 tr:hover {
     background-color: $table-hover-color;
 }
+a {
+    color: $resume-section-color;
+}
 td,
 th {
   padding: 0.5em 1em;
