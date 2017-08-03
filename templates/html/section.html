@@ -17,8 +17,9 @@
           Joshua Loyal
         </div>
         <div class='lead'>
-          Statistics Ph.D. Student<br>
-          University of Illinois at Urbana-Champaign<br>
+          {% for item in whoami %}
+            {{ item }}<br>
+          {% endfor %}
         <ul class="list-inline" style='font-size: 1.2em;'>
           <li>
             <a href="https://github.com/joshloyal" class='icon'>
@@ -44,20 +45,7 @@
     <div class='row'>
       <div class="col-md-9">
       <hr>
-      <p>
-      I am a Ph.D. student in Statistics at the University of Illinois at Urbana-Champaign.
-      In addition, I work part-time as a Data Scientist at DataRobot, a start-up in Boston
-      aimed at building an automated Machine Learning platform.
-      </p>
-
-      <p>
-      My previous background is in Physics (M.S. 2016 Yale University, B.S. 2013 Duke
-      University) and Mathematics (B.S. 2013 at Duke University). During my physics career,
-      I worked as a particle physicist as part of the ATLAS collaboration at the
-      Large Hadron Collider in Geneva, Switzerland. There I performed large scale data
-      analytics and contributed to the development of a Deep Learning framework (GAIA)
-      for classifying subatomic-particle jets.
-      </p>
+      {{ summary }}
       </div>
 
       <div class="hidden-xs col-sm-3 col-md-2">

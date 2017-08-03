@@ -5,6 +5,20 @@ import plac
 import datetime
 
 
+def add_tag(string, tag):
+    return ('<{}>' + string + '</{}>').format(tag, tag)
+
+
+def html(content):
+    """Take content and format it with paragraph breaks."""
+    new_content = ''
+    for p in content.split('\n'):
+        if p:
+            new_content += add_tag(p, 'p')
+
+    return new_content
+
+
 @plac.annotations(
     output_type=('Type of output to generate.')
 )
@@ -44,6 +58,10 @@ def main(output_type):
 
     options = yaml.load(open('./data/resume.yaml', 'r'))
     options['date'] = datetime.datetime.now().strftime("%Y-%m-%d")
+
+    if output_type == 'html':
+        options['summary'] = html(options['summary'])
+
     render_template = template.render(**options)
 
     #options = OptionsParser.from_yaml('resume.yaml')
