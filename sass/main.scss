@@ -3,6 +3,10 @@
 @import 'external/_syntax.scss';
 
 // Base
-@import 'base/variables';
+@import 'base/_variables.scss';
 @import 'base/_global.scss';
 @import 'base/_utility.scss';
+@import 'base/_utility.scss';
+
+// Components
+@import 'components/_resume.scss';

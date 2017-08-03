@@ -1,0 +1,35 @@
+.resume-name {
+    font-size: 2em;
+    //color: #4582ec;
+    //color: $resume-section-color;
+    font-weight: bold;
+    padding-bottom: 0.3em;
+}
+
+nav[data-toggle='toc'] {
+      margin-top: 30px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+    nav.affix[data-toggle='toc'] {
+        position: static;
+    }
+
+    nav[data-toggle='toc'] .nav .active .nav {
+        display: none;
+    }
+}
+
+nav[data-toggle='toc'] .nav > li > a:hover,
+nav[data-toggle='toc'] .nav > li > a:focus {
+  color: $resume-section-color;
+  border-left: 1px solid $resume-section-color;
+}
+
+nav[data-toggle='toc'] .nav > .active > a,
+nav[data-toggle='toc'] .nav > .active:hover > a,
+nav[data-toggle='toc'] .nav > .active:focus > a {
+  color: $resume-section-color;
+  border-left: 2px solid $resume-section-color;
+}
