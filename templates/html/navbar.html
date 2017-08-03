@@ -24,15 +24,11 @@
         <!-- collapsable menu that shows up for small screens -->
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
+            {% for item in navbar %}
             <li>
-              <a href="/">About</a>
+              <a href="{{ item.link }}">{{ item.title }}</a>
             </li>
-            <li>
-              <a href="/">Blog</a>
-            </li>
-            <li>
-              <a href="/">Code</a>
-            </li>
+            {% endfor %}
           </ul>
         </div> <!-- collabsable menu -->
 

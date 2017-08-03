@@ -11,15 +11,14 @@ phone: +1-(919)-923-5621
 email: joshua.d.loyal@gmail.com
 homepage: joshloyal.github.io
 
-# This determines the order of the sections
-section_order :
-  - education
-  - skills
-  - publications
-  - honors
-  - conferences
-  - work
-  - teaching
+# information for navbar on site
+navbar:
+  - title: About
+    link: /
+  - title: Blog
+    link: /blog
+  - title: Code
+    link: /
 
 whoami:
   - Statistics Ph.D. Student @ UIUC
@@ -37,6 +36,16 @@ summary:
   Large Hadron Collider in Geneva, Switzerland. There I performed large scale data
   analytics and contributed to the development of a Deep Learning framework (GAIA)
   for classifying subatomic-particle jets."
+
+# This determines the order of the sections
+section_order :
+  - education
+  - skills
+  - publications
+  - honors
+  - conferences
+  - work
+  - teaching
 
 education:
   - school: University of Illinois at Urbana-Champaign
