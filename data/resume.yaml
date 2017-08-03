@@ -20,9 +20,12 @@ navbar:
   - title: Code
     link: /
 
+site:
+  url: "http://joshloyal.github.io"
+  baseurl: joshloyal.github.io
+
 whoami:
   - Statistics Ph.D. Student @ UIUC
-  #- University of Illinois at Urbana-Champaign
   - Data Scientist @ DataRobot
 
 summary:
