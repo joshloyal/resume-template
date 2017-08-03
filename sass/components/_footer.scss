@@ -2,7 +2,7 @@
     display: inline-block;
     text-align: center;
     width: 100%;
-    color: #858585;
-    font-size: 0.9em;
-    padding: 5% 20%;
+    color: $secondary-text-color;
+    font-size: $font-size;
+    padding: $padding-small $padding-large;
 }
