@@ -65,4 +65,6 @@ viewhtml: $(HTML) $(CSS)
 clean:
 	rm -rf $(BUILD_DIR)/resume*
 	rm -rf $(CSS_DIR)
-	rm -rf $(SITE_DIR)
+	rm -rf $(SITE_DIR)/index.html
+	rm -rf $(SITE_DIR)/css/*
+	rm -rf $(SITE_DIR)/img/*
