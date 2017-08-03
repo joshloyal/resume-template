@@ -2,6 +2,7 @@ import os
 import jinja2
 import yaml
 import plac
+import datetime
 
 
 @plac.annotations(
@@ -42,6 +43,7 @@ def main(output_type):
         template = html_env.get_template('section.{}'.format(output_type))
 
     options = yaml.load(open('./data/resume.yaml', 'r'))
+    options['date'] = datetime.datetime.now().strftime("%Y-%m-%d")
     render_template = template.render(**options)
 
     #options = OptionsParser.from_yaml('resume.yaml')

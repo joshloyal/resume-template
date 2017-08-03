@@ -1,5 +1,7 @@
 build/*
 css/*
+_site/*
+.sass-cache/*
 *.aux
 *.out
 *.log

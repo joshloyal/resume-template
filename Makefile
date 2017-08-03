@@ -7,12 +7,20 @@ YAML_FILES=cv.yaml
 BASE=$(PWD)
 CSS_DIR=$(BASE)/css
 CSS=$(CSS_DIR)/main.css
+IMG_DIR=$(BASE)/img
+SITE_DIR=$(BASE)/_site
 
-.PHONY: all pdf markdown css html
+.PHONY: all pdf markdown css html site serve
 
 all: $(PDF) $(HTML) $(MD)
 
 markdown: $(MD)
+
+site: $(SITE_DIR)
+
+serve: $(SITE_DIR)
+	cd $(SITE_DIR); \
+	python ../scripts/run_server.py
 
 html: $(HTML) $(CSS)
 
@@ -25,6 +33,12 @@ $(BUILD_DIR):
 
 $(CSS_DIR):
 	mkdir -p $(CSS_DIR)
+
+$(SITE_DIR): $(HTML) $(CSS)
+	mkdir -p $(SITE_DIR)
+	cp $(HTML) $(SITE_DIR)/index.html
+	cp -r $(CSS_DIR) $(SITE_DIR)
+	cp -r $(IMG_DIR) $(SITE_DIR)
 
 $(TEX):
 	python ./src/generate.py tex
@@ -50,3 +64,4 @@ viewhtml: $(HTML) $(CSS)
 clean:
 	rm -rf $(BUILD_DIR)/resume*
 	rm -rf $(CSS_DIR)
+	rm -rf $(SITE_DIR)
