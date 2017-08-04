@@ -73,6 +73,13 @@ def main(output_type):
     with open(os.path.join('build', 'resume.{}'.format(output_type)), 'w') as f:
         f.write(render_template)
 
+    if output_type == 'html':
+        template = html_env.get_template('code.{}'.format(output_type))
+        render_template = template.render(**options)
+        with open(os.path.join('build', 'code.{}'.format(output_type)), 'w') as f:
+            f.write(render_template)
+
+
 
 if __name__ == '__main__':
     plac.call(main)

@@ -1,0 +1,28 @@
+{% extends "resume.html" %}
+
+{% block body %}
+<div class='container top-buffer'>
+  <div class='row'>
+    <div class='col-md-10 center-text'>
+    <h1 class='center-text'>Code</h1>
+    </div>
+  </div>
+  {% for item in code %}
+  <div class='row'>
+    <div class='col-md-10 col-md-offset-1'>
+    <hr/>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }} [<a href="{{ item.repo }}">Code</a>{% if item.paper %}, <a href="{{ item.paper }}">Paper</a>{% endif %}]</p>
+      {% if item.citation %}
+      <pre style="text-align: left"><code>@article{{ "{" }}{{ item.citation.short }},
+      title={{ "{" }}{{ item.citation.title }}{{ "}" }},
+      author={{ "{" }}{{ item.citation.author }}{{ "}" }},
+      journal={{ "{" }}{{ item.citation.journal }}{{ "}" }},
+      year={{ "{" }}{{ item.citation.year }}{{ "}" }}{{"}"}}
+      </code></pre>
+      {% endif %}
+    </div>
+  </div<
+  {% endfor %}
+</div>
+{% endblock %}
