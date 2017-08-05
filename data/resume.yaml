@@ -114,7 +114,7 @@ conferences:
   - type: Poster
     event: US ATLAS Physics Workshop
     title: Search for the Standard Model Higgs Boson in the
-           $H \rightarrow Z\gamma$ Decay Mode at $\sqrt{s} = 7$ and $8$ TeV
+           \(H \rightarrow Z\gamma\) Decay Mode at \(\sqrt s = 7\) and \(8\) TeV
     location: University of Michigan (Ann Arbor, MI)
     year: 2012
 
