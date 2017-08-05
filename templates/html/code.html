@@ -12,7 +12,7 @@
     <div class='col-md-10 col-md-offset-1'>
     <hr/>
       <h3>{{ item.title }}</h3>
-      <p>{{ item.description }} [<a href="{{ item.repo }}">Code</a>{% if item.paper %}, <a href="{{ item.paper }}">Paper</a>{% endif %}]</p>
+      <p >{{ item.description }}</p>
       {% if item.citation %}
       <pre style="text-align: left"><code>@article{{ "{" }}{{ item.citation.short }},
       title={{ "{" }}{{ item.citation.title }}{{ "}" }},
@@ -21,6 +21,14 @@
       year={{ "{" }}{{ item.citation.year }}{{ "}" }}{{"}"}}
       </code></pre>
       {% endif %}
+      <div class="btn-group-xs">
+        <a href="{{ item.repo }}"
+        class="button">Code</a>
+        {% if item.paper %}
+        <a href="{{ item.paper }}"
+        class="button">Paper</a>
+        {% endif %}
+      </div>
     </div>
   </div<
   {% endfor %}

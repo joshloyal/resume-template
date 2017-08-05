@@ -7,8 +7,16 @@
 <strong>{{ conf.title }}</strong><br>
 {{ conf.type }} at {{ conf.location }}<br>
 {{ conf.event }}, {{ conf.year }}<br>
-<!-- {% if conf.code %}[code]({{ conf.code }}){% endif %} -->
-{% if conf.code %}[<a href="{{conf.code}}">code</a>]{% endif %}
+<div class="btn-group-xs">
+  {% if conf.code %}
+  <a href="{{ conf.code }}"
+  class="button small-btn">Code</a>
+  {% endif %}
+  {% if conf.video %}
+  <a href="{{ conf.video }}"
+  class="button small-btn">Video</a>
+  {% endif %}
+</div>
 </td>
 </tr>
 {% endfor %}

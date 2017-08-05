@@ -96,6 +96,7 @@ conferences:
     location: Arena Lviv (Lviv, UA)
     year: 2017
     code: "https://github.com/joshloyal/pydata-amazon-products"
+    video: "https://youtu.be/SaG0gwbNHK0"
 
   - type: Talk
     event: PyData Meetup
@@ -110,6 +111,7 @@ conferences:
     location: Marriot Waterfront (San Francisco, CA)
     year: 2015
     code: "https://github.com/joshloyal/odsc-pisa"
+    video: "https://youtu.be/lHK6FNy01gE"
 
   - type: Poster
     event: US ATLAS Physics Workshop
