@@ -73,5 +73,6 @@ clean:
 	rm -rf $(CSS_DIR)
 	rm -rf $(SITE_DIR)/index.html
 	rm -rf $(SITE_DIR)/code/index.html
+	rm -rf $(SITE_DIR)/teaching-material/index.html
 	rm -rf $(SITE_DIR)/css/*
 	rm -rf $(SITE_DIR)/img/*
