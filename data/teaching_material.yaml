@@ -1,0 +1,5 @@
+- title: Confidence Intervals
+  description: Shiny application designed to demonstrate the behavior of frequentist confidence intervals.
+  repo: "https://github.com/joshloyal/confidence-interval-app/"
+  site: "https://joshloyal.shinyapps.io/confidence-interval-app/"
+  thumbnail: img/confidence-interval-app.png

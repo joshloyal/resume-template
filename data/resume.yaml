@@ -19,6 +19,8 @@ navbar:
     link: /blog
   - title: Code
     link: /code
+  - title: Teaching Material
+    link: /teaching-material
 
 site_settings:
   url: "http://joshloyal.github.io"

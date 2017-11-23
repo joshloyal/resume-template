@@ -125,8 +125,12 @@ def main(output_type):
         with open(os.path.join('build', 'code.{}'.format(output_type)), 'w') as f:
             f.write(render_template)
 
+        options['teaching_material'] = yaml.load(open(os.path.join(DATA_PATH, 'teaching_material.yaml'), 'r'))
+        template = html_env.get_template('teaching-material.{}'.format(output_type))
+        render_template = template.render(**options)
+        with open(os.path.join('build', 'teaching-material.{}'.format(output_type)), 'w') as f:
+            f.write(render_template)
 
 
 if __name__ == '__main__':
     plac.call(main)
-
