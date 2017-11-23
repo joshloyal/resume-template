@@ -118,6 +118,8 @@ def main(output_type):
         f.write(render_template)
 
     if output_type == 'html':
+        # load code content
+        options['code'] = yaml.load(open(os.path.join(DATA_PATH, 'code.yaml'), 'r'))
         template = html_env.get_template('code.{}'.format(output_type))
         render_template = template.render(**options)
         with open(os.path.join('build', 'code.{}'.format(output_type)), 'w') as f:
