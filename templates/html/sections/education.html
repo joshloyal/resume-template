@@ -3,7 +3,7 @@
 <table class="table table-hover">
 {% for edu in education %}
   <tr>
-    <td class="col-md-5">
+    <td class='col-xs-6 col-sm-6 col-md-5'>
     <strong>{{ edu.school }}</strong>
     <br>
     {{ edu.degree }}
@@ -11,7 +11,7 @@
       ({{ edu.gpa }})
     {% endif %}
     </td>
-    <td>
+    <td class='col-xs-6 col-sm-6 col-md-6'>
       <i>{{ edu.location }}</i>
       <br>
       {{ edu.dates }}

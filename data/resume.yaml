@@ -20,9 +20,10 @@ navbar:
   - title: Code
     link: /code
 
-site:
+site_settings:
   url: "http://joshloyal.github.io"
   baseurl: joshloyal.github.io
+  google_analytics: UA-104097067-1 # Tracking ID, e.g. "UA-000000-01"
 
 whoami:
   - Statistics Ph.D. Student @ UIUC

@@ -1,4 +1,6 @@
+import copy
 import os
+import re
 import jinja2
 import yaml
 import plac
@@ -19,6 +21,22 @@ def html(content):
             new_content += add_tag(p, 'p')
 
     return new_content
+
+
+def do_replacement(yaml_data, replacements):
+    yaml_data = copy.deepcopy(yaml_data)
+
+    if isinstance(yaml_data, str):
+        for org_str, rep_str in replacements:
+            yaml_data = re.sub(org_str, rep_str, yaml_data)
+    elif isinstance(yaml_data, dict):
+        for k, v in yaml_data.items():
+            yaml_data[k] = do_replacement(v, replacements)
+    elif isinstance(yaml_data, list):
+        for idx, item in enumerate(yaml_data):
+            yaml_data[idx] = do_replacement(item, replacements)
+
+    return yaml_data
 
 
 @plac.annotations(
@@ -68,6 +86,28 @@ def main(output_type):
 
     if output_type == 'html':
         options['summary'] = html(options['summary'])
+
+        # Taken from https://github.com/bamos/cv/blob/master/generate.py
+        REPLACEMENTS = [
+            (r'\\\\\[[^\]]*]', '\n'),  # newlines
+            (r'\\ ', ' '),  # spaces
+            (r'\\&', '&'),  # unescape &
+            (r'\\\$', '$'),  # unescape $
+            (r'\\%', '%'),  # unescape %
+            (r'\\textbf{([^}]*)}', r'**\1**'),  # bold text
+            (r'\{ *\\bf *([^}]*)\}', r'**\1**'),
+            (r'\\textit{([^}]*)}', r'*\1*'),  # italic text
+            (r'\{ *\\it *([^}]*)\}', r'*\1*'),
+            (r'\\LaTeX', 'LaTeX'),  # \LaTeX to boring old LaTeX
+            (r'\\TeX', 'TeX'),  # \TeX to boring old TeX
+            ('---', '-'),  # em dash
+            ('--', '-'),  # en dash
+            (r'``([^\']*)\'\'', r'"\1"'),  # quotes
+            (r'\\url{([^}]*)}', r'[\1](\1)'),  # urls
+            (r'\\href{([^}]*)}{([^}]*)}', r'[\2](\1)'),  # urls
+            (r'\{([^}]*)\}', r'\1'),  # Brackets.
+        ]
+        options = do_replacement(options, REPLACEMENTS)
 
     render_template = template.render(**options)
 
