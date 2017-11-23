@@ -1,0 +1,81 @@
+- title: Vary
+description: Scikit-learn style wrappers of various models built using Nueral Variational Inference in TensorFlow.
+repo: "https://github.com/joshloyal/Vary"
+- title: Regularized Greedy Forest
+description: A Scikit-learn style Cython wrapper around the Regularzed Greedy Forest algorithm by Rie Johnson and Tong Zhang.
+repo: "https://github.com/joshloyal/RegularizedGreedyForest"
+paper: "https://arxiv.org/abs/1109.0887"
+citation:
+  short: Johnson2014RGF
+  title: Learning Nonlinear Functions using Regularized Greedy Forest
+  author: Johnson, Rie and Zhang, Tong
+  journal: IEEE TRANS, PATTERN ANALYSIS AND MACHINE INTELLIGENCE
+  year: 2013
+  volume: 36
+  number: 5
+  pages: "942 -- 954"
+- title: Semi-Supervised Ladder Network
+description: "TensorFlow implementation of Rasmus et al's Ladder Network."
+repo: "https://github.com/joshloyal/LadderNetwork"
+paper: "https://arxiv.org/abs/1507.02672"
+citation:
+  short: Rasmus2015LADDER
+  title: Semi-Supervised Learning with Ladder Network
+  author: Rasmus et al.
+  journal: "arXiv preprint arXiv:1507.02672"
+  year: 2015
+- title: Marginalized Denoising Autoencoder
+description: Python package for the MSDA Algorithm by Chen et al.
+repo: "https://github.com/joshloyal/MarginalizedDenoisingAutoEncoder"
+paper: "https://arxiv.org/abs/1206.4683"
+citation:
+  short: Chen2012Margin
+  title: Marginalized Denoising Autoencoders for Domain Adaptation
+  author: Chen, Minmin and Xu, Zhixiang and Weinberger, Kilian and Sha, Fei
+  journal: "arXiv preprint arXiv:1206.4683"
+  year: 2012
+- title: ClumPy
+description: Implementation of various unsupervised clustering algorithms.
+repo: "https://github.com/joshloyal/ClumPy"
+- title: Deep Neural Decision Forest
+description: Fully Differentiable Neural Decision Forest in TensorFlow (re-written to allow for arbitrary mini-batch sizes).
+repo: "https://github.com/joshloyal/fully-differentiable-deep-ndf-tf"
+paper: "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/ICCV15_DeepNDF_main.pdf"
+citation:
+  short: Kontschieder2015NDF
+  title: Deep Neural Decision Forest
+  author: Kontschider, Peter and Fiterau, Madalina and Criminisi, Antonio and Rota Bulo, Samuel
+  journal: ICCV 2015
+  year: 2015
+- title: Random Forest Clustering
+description: Unsupervised clustering using a Random Forest Similarity Measure (originally proposed in a tutorial by Breiman).
+repo: "https://github.com/joshloyal/RandomForestClustering"
+paper: "https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#cluster"
+- title: LargeVis
+description: Scikit-Learn style (Cython extension around the LargeVis algorithm by Jian Tang et al.
+repo: "https://github.com/joshloyal/LargeVis"
+paper: "https://arxiv.org/abs/1602.00370"
+citation:
+  short: tang2016visualizing
+  title: Visualizing Large-scale and High-dimensional Data
+  author: Tang, Jian and Liu, Jingzhou and Zhang, Ming and Mei, Qiaozhu
+  booktitle: Proceedings of the 25th International Conference on World Wide Web
+  pages: "287 -- 297"
+  year: 2016
+  organization: Inernational World Wide Web Conferenes Steering Committee
+- title: Rotation Forest
+description: Implementation of the Rotation Forest Algorithm by Rodriques et al. 2016.
+repo: "https://github.com/joshloyal/RotationForest"
+paper: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.156.8277"
+citation:
+  short: Rodriquez06rotationforest
+  title: "Rotation forest: A new classifier ensemble method"
+  author: Juan J. Rodriquez and Ludmila I. Kuncheva and Carlos J. Alonso
+  journal: IEEE TRANS. PATTERN ANALYSIS AND MACHINE INTELLIGENCE
+  year: 2016
+  volume: 28
+  number: 10
+  pages: "1619 -- 1630"
+- title: Correlation Plots
+description: "Library to produce correlation matrix plots using various measures (Pearson's R, Spearman's R, Goodman and Kruskal's Tau, and Cramer's V)."
+repo: "https://github.com/joshloyal/correlation_plots"

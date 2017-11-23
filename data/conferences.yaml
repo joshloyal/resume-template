@@ -1,0 +1,39 @@
+- type: Talk
+  event: PyCon Ukraine
+  title: Classifying Products Based on Images and Text
+  location: Arena Lviv (Lviv, UA)
+  year: 2017
+  code: "https://github.com/joshloyal/pydata-amazon-products"
+
+- type: Talk
+  event: PyData Meetup
+  title: Classifying Products Based on Images and Text
+  location: Civis Analytics (Chicago, IL)
+  year: 2017
+  code: "https://github.com/joshloyal/pydata-amazon-products"
+
+- type: Talk and Workshop
+  event: Open Data Science Conference
+  title: Introduction to Python for Data Science
+  location: Marriot Waterfront (San Francisco, CA)
+  year: 2015
+  code: "https://github.com/joshloyal/odsc-pisa"
+
+- type: Poster
+  event: US ATLAS Physics Workshop
+  title: Search for the Standard Model Higgs Boson in the
+         $H \rightarrow Z\gamma$ Decay Mode at $\sqrt{s} = 7$ and $8$ TeV
+  location: University of Michigan (Ann Arbor, MI)
+  year: 2012
+
+- type: Talk
+  event: 77th Annual Meeting of the Southeastern Section of the American Physical Societ
+  title: W Boson Production at the ATLAS Detector
+  location: Louisiana State University (Baton Rouge, LA)
+  year: 2010
+
+- type: Poster
+  event: Sigma Xi Annual Meeting and International Research Conference
+  title: Z Boson Production at the ATLAS Detector
+  location: Raleigh Convention Center (Raleigh, NC)
+  year: 2010

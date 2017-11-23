@@ -1,0 +1,20 @@
+- school: University of Illinois at Urbana-Champaign
+  location: Champaign-Urbana, IL
+  degree: Ph.D. Statistics
+  dates: Present
+
+- school: Yale University
+  location: New Haven, CT
+  degree: M.S. Physics
+  dates: December 2016
+
+- school: Duke University
+  location: Durham, NC
+  degree: B.S. Physics and B.S. Mathematics
+  dates: May 2013
+  gpa: '3.83/4.00'
+  details:
+  - Magna Cum Laude, Graduation with High Distinction in Physics.
+  - "Dean's List
+    (Spring 2013, Fall 2012, Spring 2012, Fall 2011, Spring 2011, Spring 2010, Fall 2009)."
+  - Graduate level course work in mathematics.

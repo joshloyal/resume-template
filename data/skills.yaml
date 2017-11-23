@@ -1,0 +1,9 @@
+- title: Languages
+  details: C, C++, Python, Bash, R, MongoDB, Redis, SQL.
+
+- title: Frameworks
+  details: C++ (STL, ROOT),
+         Python (NumPy, SciPy, Scikit-learn, TensorFlow, Pandas, Matplotlib).
+
+- title: Utilities
+  details: Make, Standard Unix/Linux and OS X tools, Git, SVN, \LaTeX.

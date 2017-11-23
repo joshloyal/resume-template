@@ -5,6 +5,8 @@ import plac
 import datetime
 
 
+DATA_PATH = './data/'
+
 def add_tag(string, tag):
     return ('<{}>' + string + '</{}>').format(tag, tag)
 
@@ -56,16 +58,18 @@ def main(output_type):
     else:
         template = html_env.get_template('section.{}'.format(output_type))
 
-    options = yaml.load(open('./data/resume.yaml', 'r'))
+    options = yaml.load(open(os.path.join(DATA_PATH, 'resume.yaml'), 'r'))
+    for section in options['section_order']:
+        content_path = os.path.join(DATA_PATH, section + '.yaml')
+        if os.path.exists(content_path):
+            options[section] = yaml.load(open(content_path, 'r'))
+
     options['date'] = datetime.datetime.now().strftime("%Y-%m-%d")
 
     if output_type == 'html':
         options['summary'] = html(options['summary'])
 
     render_template = template.render(**options)
-
-    #options = OptionsParser.from_yaml('resume.yaml')
-    #render_template = template.render(**options.to_dict())
 
     if not os.path.exists('build'):
         os.makedirs('build')
