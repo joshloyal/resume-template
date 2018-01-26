@@ -22,6 +22,10 @@
       </code></pre>
       {% endif %}
       <div class="btn-group-xs">
+        {% if item.website %}
+        <a href="{{ item.website }}"
+        class="button">Website</a>
+        {% endif %}
         <a href="{{ item.repo }}"
         class="button">Code</a>
         {% if item.paper %}
